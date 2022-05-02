@@ -4,9 +4,12 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\BrandSeeder;
+use Database\Seeders\ProductSeeder;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\IdentityCard;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +25,9 @@ class DatabaseSeeder extends Seeder
         Post::factory(100)->create();
         $this->call([
             UserSeeder::class,
+            BrandSeeder::class,
+            ProductSeeder::class,
         ]);
+
     }
 }

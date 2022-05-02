@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\IdentityCardController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\ProductController;
 use App\Models\IdentityCard;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +25,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/identity', [IdentityCardController::class, 'index']);
+Route::get('/brand', [BrandController::class, 'index']);
+Route::get('/product', [ProductController::class, 'index']);

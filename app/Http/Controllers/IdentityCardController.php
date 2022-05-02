@@ -11,6 +11,10 @@ class IdentityCardController extends Controller
     {
         $identity = IdentityCard::with(['user'])->get();
 
-        dd($identity);
+        foreach ($identity as $value) {
+            echo 'Identity ID: '. $value->identity_number . '<br>';
+            echo 'Identity ID Name: '. $value->user->name . '<br>';
+            echo '---------------------------------------------------<br>';
+        }
     }
 }
