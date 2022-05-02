@@ -27,3 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/identity', [IdentityCardController::class, 'index']);
 Route::get('/brand', [BrandController::class, 'index']);
 Route::get('/product', [ProductController::class, 'index']);
+Route::get('/product/store', [ProductController::class, 'store']);
+Route::get('/product/categories', [ProductController::class, 'showData']);
+

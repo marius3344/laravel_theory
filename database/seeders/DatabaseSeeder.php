@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\BrandSeeder;
 use Database\Seeders\ProductSeeder;
+use Database\Seeders\CategorySeeder;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\IdentityCard;
@@ -27,6 +28,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             BrandSeeder::class,
             ProductSeeder::class,
+            CategorySeeder::class
         ]);
 
     }
