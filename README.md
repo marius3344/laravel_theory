@@ -1,0 +1,1 @@
+2022-04-28 tema seeders ir factories. Failai - database/factories ir database/seeders
