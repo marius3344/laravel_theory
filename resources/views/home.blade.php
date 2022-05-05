@@ -12,6 +12,9 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
+                        
+                        
+                        
                     @endif
 
                     {{ __('You are logged in!') }}
@@ -21,3 +24,9 @@
     </div>
 </div>
 @endsection
+
+<!-- echo, t.y. atspausdinti {{ kazkoks tekstas, metodas, kintamasis ir t.t}} pvz {{$user->email}}-->
+
+<!-- salygos sakiniai, ciklai ir pan. tradicinis budas <?php //if(a>b){kazkoks kodas} ?> Blade ---> @if (salyga) kodas @endif-->
+
+<!-- @{{tekstas}} - rodo pilnai kaip parasyta-->

@@ -25,8 +25,37 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/identity', [IdentityCardController::class, 'index']);
-Route::get('/brand', [BrandController::class, 'index']);
-Route::get('/product', [ProductController::class, 'index']);
-Route::get('/product/store', [ProductController::class, 'store']);
-Route::get('/product/categories', [ProductController::class, 'showData']);
 
+
+//Route::get('/brand', [BrandController::class, 'index']);
+Route::controller(BrandController::class)->group(function(){
+    Route::get('/brand', 'index')->name('brand.index');
+    Route::post('/brand', 'store')->name('brand.store');
+});
+
+//Route::get('/product', [ProductController::class, 'index']);
+//Route::get('/product/store', [ProductController::class, 'store']);
+//Route::get('/product/categories', [ProductController::class, 'showData']);
+
+Route::get('/hello', function(){
+    return 'Hello world';
+});
+
+Route::view('/test', 'welcome');
+
+// Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('edit');
+
+// $url = route('home');
+
+// $url = route('edit', ['id'=>1]);
+
+// get - metodas nekeiciame duomenu DB
+
+// post - metodas issaugoti naujus duomenis DB
+
+// put - metodas skirtas updatinti irasus DB
+
+// delete - metodas skirtas istrinti irasus DB
+
+// resource - apima visus CRUD metodus ir routes
+Route::resource('product', ProductController::class);
